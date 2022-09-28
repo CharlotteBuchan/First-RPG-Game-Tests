@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -32,13 +34,17 @@ public class Program
     // Add dictionary with animal/races + their health + rnd number addition
 
 
-    public static void Main(string[] args)
+    public static void Main(string[] args, Random random)
     {
 
-        // Dictionary for enemy types
+        // Enemy types
+
+        string[] EnemyTypes;
+
+        // Dictionary
 
         {
-            Dictionary<string, int> EnemyType = new Dictionary<string, int>(5);
+            Dictionary<string, int> EnemyType = new Dictionary<string, int>();
             EnemyType.Add("Dog", 1);
             EnemyType.Add("Squirrel",2);
             EnemyType.Add("Hedgehog",3);
@@ -51,6 +57,9 @@ public class Program
             EnemyType.Add("Badger",10);
             EnemyType.Add("Animal Control",11);
         }
+
+        int EnemyPick = random.Next(1, 11);
+        Console.WriteLine(EnemyPick);
 
         // Variables declaration
 
@@ -234,7 +243,7 @@ public class Program
                 TypeWrite("Enter your name to start: ");
                 Name = Console.ReadLine();
                 Console.Clear();
-                Name = (char.ToUpper(Name[0])) + (Name.Substring(1));
+                Name = char.ToUpper(Name[0]) + Name[1..];
                 Thread.Sleep(200);
                 TypeWrite($"{Name}? Is that correct? ");
                 Answer = Console.ReadLine().ToLower();
