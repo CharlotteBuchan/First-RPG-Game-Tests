@@ -14,8 +14,9 @@ public class Program
         public int XP;
         public int GroupAmount;
     }
-    // Add dictionary with animal/races + their health + rnd number addition
 
+
+    // Add dictionary with animal/races + their health + rnd number addition
 
     public static void Main(string[] args)
     {
@@ -107,6 +108,8 @@ public class Program
 
         }
 
+        // Starting sumo cat
+
         Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Hello, traveller!\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
         Thread.Sleep(4000);
         OffScreen();
@@ -126,6 +129,9 @@ public class Program
         Thread.Sleep(2000);
         Console.Clear();
 
+
+        // Name entry
+
         while (correct == false)
         {
             Console.Write("Enter your name to start: ");
@@ -138,6 +144,9 @@ public class Program
             Console.Clear();
         }
 
+
+        // Ask for tutorial
+
         Console.WriteLine($"Well then, {name}, welcome to my game.");
         Thread.Sleep(1000);
         Console.Write("It's a pleasure to have you here, ");
@@ -148,6 +157,8 @@ public class Program
         Console.Clear();
 
 
+        // No tutorial needed
+
         if (correct == true)
         {
             Console.WriteLine("Wow, that makes this easy.");
@@ -157,6 +168,9 @@ public class Program
             Console.Clear();
             StartScreen();
         }
+
+        // Tutorial needed
+
         else if (correct == false)
         {
             Console.WriteLine("Well then, I'll take you through the tutorial.");
@@ -164,6 +178,8 @@ public class Program
             Tutorial();
         }
 
+
+        // Tutorial
 
         static void Tutorial()
         {
@@ -180,6 +196,8 @@ public class Program
             Thread.Sleep(4000);
         }
         
+
+        // Start screen
 
         static void StartScreen()
         {
