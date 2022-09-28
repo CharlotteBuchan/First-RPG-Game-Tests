@@ -20,105 +20,162 @@ public class Program
 
     public static void Main(string[] args)
     {
-        string name = "name";
-        bool correct = false;
-        string answer = "answer";
-        int playerhealth = 100;
-        int cathealth = 100;
+        string Name = "name";
+        bool Correct = false;
+        string Answer = "answer";
+        int PlayerHealth = 100;
+        int CatHealth = 100;
         bool start = false;
+
+
+        //Scroll off-screen
 
         static void OffScreen()
         {
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
             Console.WriteLine(" ");
-            Thread.Sleep(100);
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
 
         }
+
 
         // Starting sumo cat
 
         Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Hello, traveller!\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
-        Thread.Sleep(4000);
-        OffScreen();
+        Thread.Sleep(200);
+        Console.WriteLine(" ");
+        TypeWrite("Say hi back! ");
+        Console.ReadLine();
         Console.Clear();
         Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Shall we start?\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
         Console.WriteLine(" ");
-        answer = Console.ReadLine().ToLower();
-        start = answer.Contains("y");
-        Console.Clear();
+        Answer = Console.ReadLine().ToLower();
+        start = Answer.Contains("y");
         if (start == false)
         {
             Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Oh, why not?\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
@@ -127,43 +184,45 @@ public class Program
             Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Oh well! We're starting anyways, enjoy! :)\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
         }
         Thread.Sleep(2000);
+        OffScreen();
         Console.Clear();
 
 
         // Name entry
 
-        while (correct == false)
+        while (Correct == false)
         {
-            Console.Write("Enter your name to start: ");
-            name = Console.ReadLine();
+            TypeWrite("Enter your name to start: ");
+            Name = Console.ReadLine();
             Console.Clear();
+            Name = (char.ToUpper(Name[0])) + (Name.Substring(1));
             Thread.Sleep(200);
-            Console.Write($"{name}? Is that correct? ");
-            answer = Console.ReadLine().ToLower();
-            correct = answer.Contains("y");
+            TypeWrite($"{Name}? Is that correct? ");
+            Answer = Console.ReadLine().ToLower();
+            Correct = Answer.Contains("y");
             Console.Clear();
         }
 
 
         // Ask for tutorial
 
-        Console.WriteLine($"Well then, {name}, welcome to my game.");
+        TypeWriteLine($"Well then, {Name}, welcome to my game.");
         Thread.Sleep(1000);
-        Console.Write("It's a pleasure to have you here, ");
+        TypeWrite("It's a pleasure to have you here, ");
         Thread.Sleep(1000);
-        Console.Write("do you know how to play this game? ");
-        answer = Console.ReadLine().ToLower();
-        correct = answer.Contains("y");
+        TypeWrite("do you know how to play this game? ");
+        Answer = Console.ReadLine().ToLower();
+        Correct = Answer.Contains("y");
         Console.Clear();
 
 
         // No tutorial needed
 
-        if (correct == true)
+        if (Correct == true)
         {
-            Console.WriteLine("Wow, that makes this easy.");
+            TypeWriteLine("Wow, that makes this easy.");
             Thread.Sleep(2000);
-            Console.WriteLine("I'll just plop you right into gameplay then, enjoy!");
+            TypeWriteLine("I'll just plop you right into gameplay then, enjoy!");
             Thread.Sleep(4000);
             Console.Clear();
             StartScreen();
@@ -171,9 +230,9 @@ public class Program
 
         // Tutorial needed
 
-        else if (correct == false)
+        else if (Correct == false)
         {
-            Console.WriteLine("Well then, I'll take you through the tutorial.");
+            TypeWriteLine("Well then, I'll take you through the tutorial.");
             Thread.Sleep(2000);
             Tutorial();
         }
@@ -184,24 +243,57 @@ public class Program
         static void Tutorial()
         {
             Console.Clear();
-            Console.Write("So, you're new to the game, hm? ");
+            TypeWrite("So, you're new to the game, hm? ");
+            Thread.Sleep(1000);
+            TypeWriteLine("Don't worry though, I'll help you get on your feet :) !!");
             Thread.Sleep(2000);
-            Console.WriteLine("Don't worry though, I'll help you get on your feet:) !!");
+            TypeWriteLine("The main idea of this game is to explore multiple different places such as cities, mountains etc..");
             Thread.Sleep(2000);
-            Console.WriteLine("The main idea of this game is to explore multiple different places such as cities, mountains etc..");
+            TypeWriteLine("Along the way, you can tame and collect cats.");
+            Thread.Sleep(2000);
+            TypeWriteLine("However, there are some issues you will face, which will be revealed to you later on in the game.");
             Thread.Sleep(3000);
-            Console.WriteLine("Along the way, you can tame and collect cats.");
-            Thread.Sleep(2000);
-            Console.WriteLine("However, there are some issues you come across, which will be revealed to you later on in the game.");
-            Thread.Sleep(4000);
         }
-        
+
 
         // Start screen
 
         static void StartScreen()
         {
-            Console.WriteLine("Welcome!!!!!!!!!!!!");
+            TypeWriteLine("Welcome!!!!!!!!!!!!");
+        }
+
+
+
+
+
+
+        // Scrolly text function WriteLine
+
+        static void TypeWriteLine(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i]);
+                System.Threading.Thread.Sleep(40);
+            }
+            Thread.Sleep(100);
+            Console.WriteLine("");
+
+
+        }
+
+        // Scrolly text function Write
+
+        static void TypeWrite(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i]);
+                System.Threading.Thread.Sleep(40);
+            }
+            Thread.Sleep(100);
+            Console.Write("");
         }
     }
 }
