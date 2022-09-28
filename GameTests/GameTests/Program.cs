@@ -1,8 +1,20 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 
+
 public class Program
 {
+    class Enemy
+    {
+        public string Race;
+        public int Health;
+        public int Damage;
+        public int Defense;
+        public int GP;
+        public int XP;
+    }
+
+
     public static void Main(string[] args)
     {
         string name = "name";
@@ -52,7 +64,7 @@ public class Program
         }
 
 
-        void Tutorial()
+        static void Tutorial()
         {
             Console.Clear();
             Console.Write("So, you're new to the game, hm? ");
@@ -68,7 +80,7 @@ public class Program
         }
         
 
-        void StartScreen()
+        static void StartScreen()
         {
             Console.WriteLine("Welcome!!!!!!!!!!!!");
         }
