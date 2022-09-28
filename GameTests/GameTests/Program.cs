@@ -6,13 +6,15 @@ public class Program
 {
     class Enemy
     {
-        public string Race;
+        public int Level;
         public int Health;
         public int Damage;
         public int Defense;
         public int GP;
         public int XP;
+        public int GroupAmount;
     }
+    // Add dictionary with animal/races + their health + rnd number addition
 
 
     public static void Main(string[] args)
@@ -22,8 +24,107 @@ public class Program
         string answer = "answer";
         int playerhealth = 100;
         int cathealth = 100;
+        bool start = false;
 
+        static void OffScreen()
+        {
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
+            Console.WriteLine(" ");
+            Thread.Sleep(100);
 
+        }
+
+        Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Hello, traveller!\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
+        Thread.Sleep(4000);
+        OffScreen();
+        Console.Clear();
+        Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Shall we start?\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
+        Console.WriteLine(" ");
+        answer = Console.ReadLine().ToLower();
+        start = answer.Contains("y");
+        Console.Clear();
+        if (start == false)
+        {
+            Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Oh, why not?\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
+            Thread.Sleep(3000);
+            Console.Clear();
+            Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Oh well! We're starting anyways, enjoy! :)\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
+        }
+        Thread.Sleep(2000);
+        Console.Clear();
 
         while (correct == false)
         {
