@@ -43,3 +43,18 @@ H:\Documents\First-RPG-Game-Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests
 H:\Documents\First-RPG-Game-Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.pdb
 H:\Documents\First-RPG-Game-Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.genruntimeconfig.cache
 H:\Documents\First-RPG-Game-Tests\GameTests\GameTests\obj\Debug\net6.0\ref\GameTests.dll
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.exe
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.deps.json
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.runtimeconfig.json
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.dll
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\bin\Debug\net6.0\GameTests.pdb
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.csproj.AssemblyReference.cache
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.AssemblyInfoInputs.cache
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.AssemblyInfo.cs
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.csproj.CoreCompileInputs.cache
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.dll
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\refint\GameTests.dll
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.pdb
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\GameTests.genruntimeconfig.cache
+D:\530240\Coding\First RPG Game Tests\GameTests\GameTests\obj\Debug\net6.0\ref\GameTests.dll

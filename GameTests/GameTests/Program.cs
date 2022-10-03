@@ -2,37 +2,43 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
 
 namespace GameTests
 {
+    // Enemy class variables
+    class Enemy
+    {
+        public int Level;
+        public int Health;
+        public int Damage;
+        public int Defense;
+        public int GP;
+        public int XP;
+        public int GroupAmount;
+    }
+
+    // Player class variables
+    class Player
+    {
+        public int Level;
+        public int Health;
+        public int Damage;
+        public int Defense;
+        public int GP;
+        public int XP;
+    }
     public class Program
     {
+        // Variables declaration
 
-        // Enemy class variables
-        class Enemy
-        {
-            public int Level;
-            public int Health;
-            public int Damage;
-            public int Defense;
-            public int GP;
-            public int XP;
-            public int GroupAmount;
-        }
+        static string Name = "name";
+        static int PlayerHealth = 100;
+        static int CatHealth = 100;
+        static bool Start = false;
+        static bool Correct = false;
+        static string Answer = "answer";
 
-        // Player class variables
-        class Player
-        {
-            public int Level;
-            public int Health;
-            public int Damage;
-            public int Defense;
-            public int GP;
-            public int XP;
-        }
-
-
-        // Add dictionary with animal/races + their health + rnd number addition
 
 
         private static void Main(string[] args)
@@ -61,7 +67,6 @@ namespace GameTests
             }
 
 
-
             Random ranumber = new Random();
             int EnemyPick = ranumber.Next(1, 11);
             Console.WriteLine(EnemyPick);
@@ -69,151 +74,11 @@ namespace GameTests
             // Variables declaration
 
             string Name = "name";
-            bool Correct = false;
-            string Answer = "answer";
             int PlayerHealth = 100;
             int CatHealth = 100;
             bool start = false;
 
-
-            //Scroll off-screen
-
-            static void OffScreen()
-            {
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-                Console.WriteLine(" ");
-                Thread.Sleep(25);
-
-            }
-
-
-            // Starting sumo cat
-
+            // Sumo cat
             {
                 Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Hello, traveller!\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
                 Thread.Sleep(300);
@@ -239,8 +104,6 @@ namespace GameTests
                 Console.Clear();
             }
 
-
-            // Name entry
 
             {
                 while (Correct == false)
@@ -298,66 +161,204 @@ namespace GameTests
                 }
             }
 
-
-            // Tutorial
-
-            static void Tutorial()
-            {
-                Console.Clear();
-                TypeWrite("So, you're new to the game, hm? ");
-                Thread.Sleep(1000);
-                TypeWriteLine("Don't worry though, I'll help you get on your feet :) !!");
-                Thread.Sleep(2000);
-                TypeWriteLine("The main idea of this game is to explore multiple different places such as cities, mountains etc..");
-                Thread.Sleep(2000);
-                TypeWriteLine("Along the way, you can tame and collect cats.");
-                Thread.Sleep(2000);
-                TypeWriteLine("However, there are some issues you will face, which will be revealed to you later on in the game.");
-                Thread.Sleep(2500);
-                Console.Clear();
-                TypeWrite("Would you like to play a test fight scene? ");
-            }
-
-
-            // Start screen
-
-            static void StartScreen()
-            {
-                TypeWriteLine("Welcome!!!!!!!!!!!!");
-            }
-
-
-
-
-
-
-            // Scrolly text function WriteLine
-
-            static void TypeWriteLine(string message)
-            {
-                for (int i = 0; i < message.Length; i++)
-                {
-                    Console.Write(message[i]);
-                    System.Threading.Thread.Sleep(40);
-                }
-                Thread.Sleep(100);
-                Console.WriteLine("");
-
-
-            }
-
-            // Scrolly text function Write
-
-            static void TypeWrite(string message)
-            {
-                for (int i = 0; i < message.Length; i++)
-                {
-                    Console.Write(message[i]);
-                    System.Threading.Thread.Sleep(40);
-                }
-                Thread.Sleep(100);
-                Console.Write("");
-            }
         }
+
+
+        //Scroll off-screen
+
+        static void OffScreen()
+        {
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+            Console.WriteLine(" ");
+            Thread.Sleep(25);
+
+        }
+
+
+        // Start screen
+
+        static void StartScreen()
+        {
+            TypeWriteLine("Welcome!!!!!!!!!!!!");
+        }
+
+
+
+
+        // Tutorial
+
+        static void Tutorial()
+        {
+            Console.Clear();
+            TypeWrite("So, you're new to the game, hm? ");
+            Thread.Sleep(1000);
+            TypeWriteLine("Don't worry though, I'll help you get on your feet :) !!");
+            Thread.Sleep(2000);
+            TypeWriteLine("The main idea of this game is to explore multiple different places such as cities, mountains etc..");
+            Thread.Sleep(2000);
+            TypeWriteLine("Along the way, you can tame and collect cats.");
+            Thread.Sleep(2000);
+            TypeWriteLine("However, there are some issues you will face, which will be revealed to you later on in the game.");
+            Thread.Sleep(2500);
+            Console.Clear();
+            TypeWrite("Would you like to play a test fight scene? ");
+            Answer = Console.ReadLine().ToLower();
+            Correct = Answer.Contains("y");
+        }
+
+
+        // Scrolly text function WriteLine
+
+        static void TypeWriteLine(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i]);
+                System.Threading.Thread.Sleep(40);
+            }
+            Thread.Sleep(100);
+            Console.WriteLine("");
+
+
+        }
+
+        // Scrolly text function Write
+
+        static void TypeWrite(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i]);
+                System.Threading.Thread.Sleep(40);
+            }
+            Thread.Sleep(100);
+            Console.Write("");
+        }
+
     }
 }
