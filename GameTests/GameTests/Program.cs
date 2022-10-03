@@ -60,6 +60,8 @@ namespace GameTests
                 EnemyType.Add("Animal Control", 11);
             }
 
+
+
             Random ranumber = new Random();
             int EnemyPick = ranumber.Next(1, 11);
             Console.WriteLine(EnemyPick);
