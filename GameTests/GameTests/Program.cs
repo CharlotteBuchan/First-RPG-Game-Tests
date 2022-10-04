@@ -51,25 +51,23 @@ namespace GameTests
 
             // Dictionary
 
-            {
-                Dictionary<string, int> EnemyType = new Dictionary<string, int>();
-                EnemyType.Add("Dog", 1);
-                EnemyType.Add("Squirrel", 2);
-                EnemyType.Add("Hedgehog", 3);
-                EnemyType.Add("Crow", 4);
-                EnemyType.Add("Raccoon", 5);
-                EnemyType.Add("Fox", 6);
-                EnemyType.Add("Skunk", 7);
-                EnemyType.Add("Coyote", 8);
-                EnemyType.Add("Rat", 9);
-                EnemyType.Add("Badger", 10);
-                EnemyType.Add("Animal Control", 11);
-            }
+            var EnemyType = new Dictionary<int, string>();
+            EnemyType.Add(1, "Dog");
+            EnemyType.Add(2, "Squirrel");
+            EnemyType.Add(3, "Hedgehog");
+            EnemyType.Add(4, "Crow");
+            EnemyType.Add(5, "Raccoon");
+            EnemyType.Add(6, "Fox");
+            EnemyType.Add(7, "Skunk");
+            EnemyType.Add(8, "Coyote");
+            EnemyType.Add(9, "Rat");
+            EnemyType.Add(10, "Badger");
+            EnemyType.Add(11, "Animal Control");
 
 
-            Random ranumber = new Random();
-            int EnemyPick = ranumber.Next(1, 11);
-            Console.WriteLine(EnemyPick);
+            Random RanNumber = new Random();
+            int EnemyPick = RanNumber.Next(1, 11);
+            Console.WriteLine(EnemyType.ElementAt(EnemyPick).Value);
 
             // Variables declaration
 
@@ -104,6 +102,7 @@ namespace GameTests
                 Console.Clear();
             }
 
+            // Enter name
 
             {
                 while (Correct == false)
