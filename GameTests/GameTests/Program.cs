@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
+using System.Collections.Generic;
 
 namespace GameTests
 {
@@ -39,44 +40,15 @@ namespace GameTests
         static bool Correct = false;
         static string Answer = "answer";
 
+ 
 
 
         private static void Main(string[] args)
         {
 
 
-            // Enemy types
-
-            string[] EnemyTypes;
-
-            // Dictionary
-
-            var EnemyType = new Dictionary<int, string>();
-            EnemyType.Add(1, "Dog");
-            EnemyType.Add(2, "Squirrel");
-            EnemyType.Add(3, "Hedgehog");
-            EnemyType.Add(4, "Crow");
-            EnemyType.Add(5, "Raccoon");
-            EnemyType.Add(6, "Fox");
-            EnemyType.Add(7, "Skunk");
-            EnemyType.Add(8, "Coyote");
-            EnemyType.Add(9, "Rat");
-            EnemyType.Add(10, "Badger");
-            EnemyType.Add(11, "Animal Control");
-
-
-            Random RanNumber = new Random();
-            int EnemyPick = RanNumber.Next(1, 11);
-            Console.WriteLine(EnemyType.ElementAt(EnemyPick).Value);
-
-            // Variables declaration
-
-            string Name = "name";
-            int PlayerHealth = 100;
-            int CatHealth = 100;
-            bool start = false;
-
             // Sumo cat
+
             {
                 Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Hello, traveller!\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
                 Thread.Sleep(300);
@@ -89,8 +61,8 @@ namespace GameTests
                 Thread.Sleep(300);
                 TypeWrite("Answer: ");
                 Answer = Console.ReadLine().ToLower();
-                start = Answer.Contains("y");
-                if (start == false)
+                Start = Answer.Contains("y");
+                if (Start == false)
                 {
                     Console.WriteLine("                                          \r\n            :\"-.          .-\";                   \r\n            |:`.`.__..__.'.';|                   \r\n            || :-\"      \"-; ||                   \r\n            :;              :;                   \r\n            /  .==.    .==.  \\                   \r\n           :      _.--._      ;                  Oh, why not?\r\n           ; .--.' `--' `.--. :                  \r\n          :   __;`      ':__   ;                 \r\n          ;  '  '-._:;_.-'  '  :                 \r\n          '.       `--'       .'                 \r\n           .\"-._          _.-\".                  \r\n         .'     \"\"------\"\"     `.                \r\n        /`-                    -'\\               \r\n       /`-                      -'\\              \r\n      :`-   .'              `.   -';             \r\n      ;    /                  \\    :             \r\n     :    :                    ;    ;            \r\n     ;    ;                    :    :            \r\n     ':_:.'                    '.;_;'            \r\n        :_                      _;               \r\n        ; \"-._                -\" :`-.     _.._   \r\n        :_          ()          _;   \"--::__. `. \r\n         \\\"-                  -\"/`._           : \r\n        .-\"-.                 -\"-.  \"\"--..____.' \r\n       /         .__  __.         \\              \r\n      : / ,       / \"\" \\       . \\ ;        \r\n       \"-:___..--\"      \"--..___;-\"   ");
                     Thread.Sleep(3000);
@@ -162,6 +134,31 @@ namespace GameTests
 
         }
 
+
+
+        // EnemyType
+
+        static string EnemyType()
+        {
+            var EnemyType = new Dictionary<int, string>();
+            EnemyType.Add(1, "Dog");
+            EnemyType.Add(2, "Squirrel");
+            EnemyType.Add(3, "Hedgehog");
+            EnemyType.Add(4, "Crow");
+            EnemyType.Add(5, "Raccoon");
+            EnemyType.Add(6, "Fox");
+            EnemyType.Add(7, "Skunk");
+            EnemyType.Add(8, "Coyote");
+            EnemyType.Add(9, "Rat");
+            EnemyType.Add(10, "Badger");
+            EnemyType.Add(11, "Animal Control");
+
+            Random RanNumber = new Random();
+            int EnemyPick = RanNumber.Next(1, 11);
+            string choice = EnemyType.ElementAt(EnemyPick).Value;
+
+            return choice;
+        }
 
         //Scroll off-screen
 
@@ -304,9 +301,9 @@ namespace GameTests
         static void StartScreen()
         {
             TypeWriteLine("Welcome!!!!!!!!!!!!");
+            TypeWriteLine("I'm going to put you straight into your first fight scene since I'm coding with limited time right now, sorry, have fun!");
+            TestFight();
         }
-
-
 
 
         // Tutorial
@@ -328,6 +325,24 @@ namespace GameTests
             TypeWrite("Would you like to play a test fight scene? ");
             Answer = Console.ReadLine().ToLower();
             Correct = Answer.Contains("y");
+            if (Correct == true)
+            {
+                TypeWriteLine("Alright, I'll get you started with a random enemy. Have fun!");
+                TestFight();
+            }
+            else
+            {
+                TypeWriteLine("Too bad, you don't have a choice because I'm running out of time to finish this code. Hah- have fun!");
+                TestFight();
+            }
+        }
+
+
+        // Test Fight Scene
+
+        static void TestFight()
+        {
+            // tbc
         }
 
 
